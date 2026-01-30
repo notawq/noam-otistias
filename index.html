@@ -1,18 +1,26 @@
-
 <!DOCTYPE html>
 <html lang="he">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PG | Next‑Gen Project</title>
+  <title>PG | Next-Gen Project</title>
+
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;500;800&display=swap" rel="stylesheet">
+
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Rubik', sans-serif; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik', sans-serif;
+    }
+
     body {
       background: radial-gradient(circle at top, #0f2027, #000);
       color: #fff;
       overflow-x: hidden;
     }
+
     header {
       height: 100vh;
       display: flex;
@@ -20,8 +28,8 @@
       align-items: center;
       justify-content: center;
       text-align: center;
-      position: relative;
     }
+
     header h1 {
       font-size: 4rem;
       font-weight: 800;
@@ -30,11 +38,13 @@
       -webkit-text-fill-color: transparent;
       animation: glow 3s infinite alternate;
     }
+
     header p {
       margin-top: 20px;
       font-size: 1.2rem;
       opacity: 0.85;
     }
+
     .btn {
       margin-top: 40px;
       padding: 15px 40px;
@@ -47,23 +57,28 @@
       box-shadow: 0 0 25px rgba(0,198,255,0.6);
       transition: transform 0.3s, box-shadow 0.3s;
     }
+
     .btn:hover {
       transform: scale(1.08);
       box-shadow: 0 0 45px rgba(0,198,255,1);
     }
+
     section {
       padding: 100px 10%;
       text-align: center;
     }
+
     section h2 {
       font-size: 2.5rem;
       margin-bottom: 40px;
     }
+
     .cards {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 30px;
     }
+
     .card {
       background: rgba(255,255,255,0.05);
       border-radius: 20px;
@@ -71,8 +86,61 @@
       backdrop-filter: blur(10px);
       transition: transform 0.4s, background 0.4s;
     }
+
     .card:hover {
       transform: translateY(-15px) scale(1.03);
       background: rgba(0,198,255,0.15);
     }
 
+    footer {
+      padding: 40px;
+      text-align: center;
+      opacity: 0.6;
+      font-size: 0.9rem;
+    }
+
+    @keyframes glow {
+      from { text-shadow: 0 0 10px rgba(0,198,255,0.4); }
+      to   { text-shadow: 0 0 30px rgba(0,198,255,1); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>PG PROJECT</h1>
+    <p>אתר תצוגה קטלני • HTML • CSS • JS</p>
+    <button class="btn" onclick="scrollToSection()">בוא נתחיל</button>
+  </header>
+
+  <section id="about">
+    <h2>למה זה מרשים?</h2>
+    <div class="cards">
+      <div class="card">🔥 עיצוב מודרני עם אנימציות</div>
+      <div class="card">⚡ קוד נקי ופשוט</div>
+      <div class="card">🚀 מוכן ל-GitHub Pages</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>איך משתמשים?</h2>
+    <p>
+      1. שמור כ- <b>index.html</b><br>
+      2. העלה לגיטהאב<br>
+      3. הפעל GitHub Pages
+    </p>
+  </section>
+
+  <footer>
+    © 2026 PG | Built to impress on GitHub
+  </footer>
+
+  <script>
+    function scrollToSection() {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+
+</body>
+</html>
